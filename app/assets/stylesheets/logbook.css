@@ -123,28 +123,27 @@ li:nth-child(11) {
 opacity:0;
 }
 
-@media min-width 768px{
-.container {
-width:750px;
+@media screen and (min-width 768px) {
+  .container {
+    width:750px;
+    }
+  form input[type=text] {
+    width:400px;
+    }
+}
+
+@media screen and (min-width 992px) {
+  .container {
+    width:970px;
 }
 
 form input[type=text] {
-width:400px;
-}
-}
-
-@media min-width 992px{
-.container {
-width:970px;
+    width:600px;
+  }
 }
 
-form input[type=text] {
-width:600px;
-}
-}
-
-@media min-width 1200px{
-.container {
-width:1170px;
-}
+@media screen and (min-width 1200px) {
+  .container {
+    width:1170px;
+  }
 }
