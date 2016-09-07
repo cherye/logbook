@@ -1,0 +1,33 @@
+ <div class="header">
+      <div class="container">
+        <h1>medical logbook</h1>
+        <h3>helpful tip: log entries are organised in descending order.</h3>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        
+      <%= form_for(@new_post) do |f| %>  
+  <div class="field"> 
+    <%= f.label :input_new_log_below %><br> 
+    <%= f.text_area :entry %> 
+  </div> 
+  <div class="actions"> 
+    <%= f.submit "update" %> 
+  </div> 
+<% end %>
+
+        <ul class="entries"> 
+          <% @all_posts.each do |p| %> 
+          <li><%= p.entry %></li> 
+          <div class="input-time">
+          the above log was created at
+           <%= p.created_at %> </div>
+           <br>
+           <br>
+          <% end %> 
+        </ul>
+
+      </div>
+    </div>
